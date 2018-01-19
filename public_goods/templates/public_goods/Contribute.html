@@ -1,24 +1,21 @@
 {% extends "public_goods/Style.html" %}
 {% load staticfiles otree %}
 
-{% block title %}
-  <div class="site-header quarterw inline-block border-box">
-    <div class="title-otree rborder inline-block border-box">
-      <h2 class="blue-txt">o<b class="red-txt">Tree</b></h1>
-    </div>
-    <div class="title-game-name light-blue-txt inline-block border-box">
-      <h3>Public Goods</h3>
-    </div>
-  </div>
 
-  <div class="dark-blue-txt t-align-center halfw inline-block border-box">
-    <h1>
-      Contribute
-    </h1>
-  </div>
+
+{% block title %}
+  Contribute
 {% endblock %}
 
 {% block content %}
+    <div class="site-header quarterw inline-block border-box">
+      <div class="title-otree rborder p10rig inline-block border-box">
+        <h2 class="blue-txt">o<b class="red-txt">Tree</b></h1>
+      </div>
+      <div class="title-game-name light-blue-txt inline-block border-box">
+        <h3>Public Goods</h3>
+      </div>
+    </div>
 
     {% formfield player.contribution label="How much will you contribute to the project (from 0 to 100)?" %}
 
