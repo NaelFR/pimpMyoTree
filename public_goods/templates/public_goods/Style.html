@@ -62,10 +62,18 @@
         /* ANIMATION */
         .hidden {visibility: hidden;}
         .visible {visibility: visible;}
+        .instructions p.desactive {
+          opacity: 1;
+          transition:  opacity 3s ease-in-out;
+        }
+        .instructions p.active {
+          opacity: 0;
+          transition:  opacity 3s ease-in-out;
+        }
+
         .instructions {
           background-color: white;
-          animation-duration: 3s;
-          animation-name: slidein;
+
         }
 
         .otree-btn-next {
@@ -104,10 +112,10 @@
       let pInstructions = document.getElementById('instructions').querySelectorAll('p')
       let pDisplay = () => {
         for (var i = 0; i < pInstructions.length; i++) {
-          if(pInstructions[i].className == 'visible') {
-            pInstructions[i].className = 'hidden'
+          if(pInstructions[i].className == 'active') {
+            pInstructions[i].className = 'desactive'
           } else {
-            pInstructions[i].className = 'visible'
+            pInstructions[i].className = 'active'
           }
 
         }
