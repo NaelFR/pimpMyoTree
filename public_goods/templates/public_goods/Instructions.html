@@ -1,12 +1,12 @@
 {% load otree staticfiles %}
 
-<div class="instructions well well-lg">
+<div id="instructions" class="instructions well well-lg">
 
-    <h3 class="panel-sub-heading">
+    <h3 class="panel-sub-heading" onclick="pDisplay()">
         Instructions
     </h3>
 
-    <p>
+    <p class="visible">
         In this study, you will be in a randomly formed group
         of {{ Constants.players_per_group }} participants. Each participant in
         the group is given {{ Constants.endowment }}. The group
@@ -15,7 +15,7 @@
         the project. Contribution could be any integer from 0
         to {{ Constants.endowment }}.
     </p>
-    <p>
+    <p class="visible">
         The earnings from the project are calculated as follows: The
         contributions of all {{ Constants.players_per_group }} participants are
         added up, the total contribution
@@ -26,4 +26,3 @@
         the amount you did not contribute.
     </p>
 </div>
-
