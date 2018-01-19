@@ -1,0 +1,119 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block app_styles %}
+
+    <style type="text/css">
+        body {
+          margin-top: 150px;
+          background-color: #eeeeee;
+        }
+
+        h2 {
+          font-size: 2.4rem;
+        }
+
+        /* COLORS */
+        .dark-blue-txt { color: #003c8f; }
+        .blue-txt { color: #1565c0; }
+        .light-blue-txt { color: #5e92f3; }
+
+        .dark-red-txt { color: #9b0000; }
+        .red-txt { color: #d50000; }
+        .light-red-txt { color: #ff5131; }
+
+        /* TEXT CUSTOMISATION */
+        .t-algin-left { text-align: left; }
+        .t-align-right { text-align: right; }
+        .t-align-center { text-align: center; }
+
+        /* POSITIONNING */
+        .inline-block { display: inline-block; }
+
+        .m10 { margin: 10px; }
+        .m10top { margin-top: 10px; }
+        .m10bot { margin-bottom: 10px; }
+        .m10rig { margin-right: 10px; }
+        .m10lef { margin-left: 10px; }
+
+        .m20 { margin: 20px; }
+        .m20top { margin-top: 20px; }
+        .m20bot { margin-bottom: 20px; }
+        .m20rig { margin-right: 20px; }
+        .m20lef { margin-left: 20px; }
+
+        /* SIZING */
+        .border-box { box-sizing: border-box; }
+        .halfw {width: 50%;}
+        .quarterw {width: 25%;}
+
+        /* BORDERING */
+        .rborder {
+          border-right-width:1px;
+          border-right-style:solid;
+          border-color: #90caf9;
+          padding-right: 4%;
+        }
+        .material-shadow {
+          box-shadow: 0 1.5px 4px 0 rgba(0,0,0,0.37);
+          transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        /* ANIMATION */
+        .hidden {visibility: hidden;}
+        .visible {visibility: visible;}
+        .instructions {
+          background-color: white;
+          animation-duration: 3s;
+          animation-name: slidein;
+        }
+
+        .otree-btn-next {
+          box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+          transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .page-header {
+          margin: 0;
+          padding: 10px;
+          color: #FFF;
+          background-color: #fff;
+          height: 5em;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 22;
+          border-bottom: solid 1px #ddd;
+          box-shadow: 0 3px 9px 0 rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.04);
+          transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .page-header h2 {
+
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <!-- define a script -->
+    <script>
+      let pInstructions = document.getElementById('instructions').querySelectorAll('p')
+      let pDisplay = () => {
+        for (var i = 0; i < pInstructions.length; i++) {
+          if(pInstructions[i].className == 'visible') {
+            pInstructions[i].className = 'hidden'
+          } else {
+            pInstructions[i].className = 'visible'
+          }
+
+        }
+      }
+    </script>
+
+    <!-- or reference a static file -->
+    <script src="{% static "my_app/script.js" %}"></script>
+{% endblock %}
