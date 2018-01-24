@@ -1,0 +1,37 @@
+{% load otree staticfiles %}
+
+<div id="instructions" class="instructions well well-lg">
+    <div class="title-instructions bborder bradius p10" onclick="display()">
+      <div class="halfw  inline-block border-box">
+        <h3 class="panel-sub-heading inline-block" >
+            Instructions
+        </h3>
+      </div>
+      <div class="halfw  inline-block border-box t-align-right">
+        <i id="instructions-minus" class="fa fa-plus-square-o fa-lg inline-block m10lef t-align-right" aria-hidden="true"></i>
+      </div>
+
+    </div>
+
+    <div id="p-instructions" class="p-instructions light-grey p10 desactive">
+      <p class="">
+          In this study, you will be in a randomly formed group
+          of {{ Constants.players_per_group }} participants. Each participant in
+          the group is given {{ Constants.endowment }}. The group
+          has the opportunity to undertake a joint project. Each participant in
+          the group decides how much she or he is going to contribute to
+          the project. Contribution could be any integer from 0
+          to {{ Constants.endowment }}.
+      </p>
+      <p class="">
+          The earnings from the project are calculated as follows: The
+          contributions of all {{ Constants.players_per_group }} participants are
+          added up, the total contribution
+          is multiplied by a factor of {{ Constants.multiplier }}, and the
+          resulting amount is the total earnings from the project, which is
+          evenly split among all {{ Constants.players_per_group }}
+          participants. Your payoff equals your earnings from the project, plus
+          the amount you did not contribute.
+      </p>
+    </div>
+</div>
