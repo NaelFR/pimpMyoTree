@@ -14,11 +14,12 @@
         <h3>Public Goods</h3>
       </div>
     </div>
+	<table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
+    <tr><td>{% formfield player.contribution label="How much will you contribute to the project (from 0 to 100)?" %}</td></tr>
 
-    {% formfield player.contribution label="How much will you contribute to the project (from 0 to 100)?" %}
+    <tr><td>{% next_button %}</td></tr>
 
-    {% next_button %}
-
-    {% include Constants.instructions_template %}
+    <tr><td>{% include Constants.instructions_template %}</td></tr>
+	</table>
 
 {% endblock %}

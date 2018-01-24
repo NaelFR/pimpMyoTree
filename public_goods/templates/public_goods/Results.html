@@ -34,12 +34,14 @@
         <tr><td>Thus in total you earned:</td><td><span class="badge badge-secondary p8">{{ player.payoff }}</span></td></tr>
 
     </table>
-    <p></p>
+	
+    <tr><td>{% next_button %}</td></tr>
+	
+	<table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
 
-    {% next_button %}
-
-
-    {% include Constants.instructions_template %}
+    <tr><td>{% include Constants.instructions_template %}</td></tr>
+	
+	</table>
 
 
 {% endblock %}
