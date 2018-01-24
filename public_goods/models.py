@@ -15,7 +15,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     instructions_template = 'public_goods/Instructions.html'
-    # instructions_template2 = 'public_goods/Instructions2.html'
+    instructions_template2 = 'public_goods/Instructions2.html'
 
     # """Amount allocated to each player"""
     endowment = c(100)

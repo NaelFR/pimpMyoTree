@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="site-header quarterw inline-block border-box">
-      <div class="title-otree rborder p10rig inline-block border-box">
-        <h2 class="blue-txt">o<b class="red-txt">Tree</b></h1>
-      </div>
-      <div class="title-game-name light-blue-txt inline-block border-box">
-        <h3>Public Goods</h3>
-      </div>
-    </div><table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
-  <tr><td>{% include Constants.instructions_template %}</td></tr>
-  <tr><td>{% next_button %}</td></tr>
-</table>{% endblock %}
+  <div class="site-header quarterw inline-block border-box">
+    <div class="title-otree rborder p10rig inline-block border-box">
+      <h2 class="blue-txt">o<b class="red-txt">Tree</b></h1>
+    </div>
+    <div class="title-game-name light-blue-txt inline-block border-box">
+      <h3>Public Goods</h3>
+    </div>
+  </div>
+  {% include Constants.instructions_template %}
+  {% next_button %}
+{% endblock %}
