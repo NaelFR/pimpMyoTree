@@ -12,7 +12,7 @@
       <div class="title-game-name light-blue-txt inline-block border-box">
         <h3>Public Goods</h3>
       </div>
-    </div>
-  {% include Constants.instructions_template %}
-  {% next_button %}
-{% endblock %}
+    </div><table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
+  <tr><td>{% include Constants.instructions_template %}</td></tr>
+  <tr><td>{% next_button %}</td></tr>
+</table>{% endblock %}
