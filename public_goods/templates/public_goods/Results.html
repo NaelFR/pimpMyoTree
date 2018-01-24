@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
+    <table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto; margin-bottom: 20px;">
         <tr><td>You contributed:</td><td><span class="badge badge-secondary p8">{{ player.contribution }}</span></td></tr>
         <tr><td>Other participants contributed:</td><td></td></tr>
         {% for p in player.get_others_in_group %}
@@ -36,12 +36,6 @@
     </table>
 	
     <tr><td>{% next_button %}</td></tr>
-	
-	<table class="table table-condensed material-shadow" style="max-width:1000px; margin:auto;">
-
-    <tr><td>{% include Constants.instructions_template %}</td></tr>
-	
-	</table>
 
 
 {% endblock %}
